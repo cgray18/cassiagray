@@ -7,7 +7,7 @@ img {
      display: grid;
 }
 div.container {
-    max-width: 80em;
+    max-width: 85em;
     margin: auto;
     background-color: rgb(249, 249, 249);
 }
