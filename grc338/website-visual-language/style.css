@@ -11,7 +11,7 @@ body {
 }
 
 div.home-container { 
-	background: url(home.jpeg) center center fixed;
+	background: url(home-background-13.jpg) center center fixed;
 	background-size: cover;
 	position: relative;
 	min-height: 100vh;
@@ -43,7 +43,7 @@ header {
 	}
 
 h1 {
-	width: 20em ;
+	width: 18em ;
 	padding-bottom: 1em;
 	}
 
@@ -84,7 +84,6 @@ a {
 
 nav ul  {
 	text-align: right;
-	margin-top: 0.5em;
 	}
 
 	
@@ -131,13 +130,13 @@ p.price {
 nav ul li {
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-bottom: 1.4em;
+	margin-bottom: 0.5em;
 	}
 	
 nav ul li a {
-	color: rgb(245,245,245);
-	background-color: rgb(128,128,128);
-	padding: .4em .4em .4em;
+	color: rgb(230,107,44);
+	padding: .2em .2em .2em;
+	font-size: 1.3em;
 	}
 
 nav ul li.selected a {
@@ -150,11 +149,24 @@ p.slogan {
 	font-family: "proxima-soft", sans-serif;
 	font-weight: 500;
 	font-style: italic;
-	text-align: right;
+	text-align: left;
 	margin: 1em 0em 0em;
 	color: rgb(245,245,245);	
 	}
-	
+h3.visit {
+	text-align: left;
+	margin: 4em 0em 0em;
+	color: rgb(245,245,245);
+}
+p.address {
+	font-size: 1em;
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	text-align: left;
+	margin: 0em 0em 0em;
+	color: rgb(245,245,245);
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -164,11 +176,6 @@ footer {
   padding: 1.3em 1em;
   background: rgb(220,220,220);
 }
-
-div.home-address {
-	text-align: right;
-	margin-bottom: 2em;
-	}
 
 address {
 	font-family: "proxima-soft", sans-serif;
@@ -182,6 +189,7 @@ footer p {
 	margin: 0em;
 }
 @media screen and (min-width: 60em) {
+	
 	div.home-container {
 		max-width: 60em;
 		margin: auto;
