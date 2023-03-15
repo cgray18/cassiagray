@@ -1,0 +1,208 @@
+/*CSS DOCUMENT*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
+
+html {
+	background-color: rgb(230,107,44);
+}
+
+body {
+    font-family: sans-serif
+}
+
+div.home-container { 
+	background: url(home.jpeg) center center fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 5em;
+}
+
+/* >>> IMPORTANT: you have to change the wrap the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class.  */
+
+div.container { 
+	position: relative;
+	min-height: 100vh;
+	background-color: rgb(245,245,245);
+	padding-bottom: 5em;
+}
+main { 
+	padding: 1em 2em 2em;
+	}
+
+img {
+    width: 100%; /*Please leave this line.*/
+     display: block;
+}
+
+header {
+	display: grid;
+	grid-template-columns:60% 40%;
+	background: rgb(220,220,220);
+	padding: 1em 2em 1em;
+	}
+
+h1 {
+	width: 20em ;
+	padding-bottom: 1em;
+	}
+
+h2, h3, h4 {
+		font-weight: bold;
+		color: rgb(50,50,50);
+	}
+
+h2 {
+	font-size: 2.2em;
+	margin: 1.1em 0em 1em;
+	color: rgb(230,107,44);
+	font-family: "arpona", serif;
+	font-weight: 700;
+	font-style: normal;
+	}
+	
+h3 {
+	font-size: 1.7em;
+	margin: 1.5em 0em 0.5em;
+	font-family: "arpona", serif;
+	font-weight: 500;
+	font-style: normal;
+}
+h4 {
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 500;
+	font-style: normal;	
+}
+
+a {
+	
+	text-decoration: none;
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	}
+
+nav ul  {
+	text-align: right;
+	margin-top: 0.5em;
+	}
+
+	
+ul li 	{
+	list-style-type: none;
+}
+
+figure {
+	margin-bottom: 2em;
+}
+
+main.menu ul {
+		margin:  0em;
+}	
+
+main.menu ul li {
+		margin: 2em 0em 2em;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+}	
+
+p {
+	margin: 0em 0em 1em;
+	color: rgb(50,50,50);
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	}
+
+p.description {
+	grid-column: 1/2;
+	margin: 0.3em 0em;
+	}
+	
+p.price {
+	grid-row: 1/2;
+	grid-column: 2/3;
+	color: rgb(230,107,44);
+	text-align: right;
+	margin: 0em;
+	}
+	
+nav ul li {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 1.4em;
+	}
+	
+nav ul li a {
+	color: rgb(245,245,245);
+	background-color: rgb(128,128,128);
+	padding: .4em .4em .4em;
+	}
+
+nav ul li.selected a {
+	color: rgb(250,250,250);
+	background-color: rgb(230,107,44);
+	}
+
+p.slogan {
+	font-size: 4.5em;
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	text-align: right;
+	margin: 1em 0em 0em;
+	color: rgb(245,245,245);	
+	}
+	
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem; 
+  box-sizing: border-box;
+  padding: 1.3em 1em;
+  background: rgb(220,220,220);
+}
+
+div.home-address {
+	text-align: right;
+	margin-bottom: 2em;
+	}
+
+address {
+	font-family: "proxima-soft", sans-serif;
+	font-weight: 300;
+	color: rgb(230,107,44);
+	font-style: normal;
+	}
+
+
+footer p {
+	margin: 0em;
+}
+@media screen and (min-width: 60em) {
+	div.home-container {
+		max-width: 60em;
+		margin: auto;
+	}
+	div.container {
+		max-width: 60em;
+		margin: auto;
+	}
+	nav ul li {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin:0em 0.5em;
+		display: inline;
+		}
+	nav {
+		margin-top: 2em
+	}
+	main.menu ul {
+		display: grid;
+		grid-template-columns: auto auto;
+		column-gap: 4em
+	}
+
+}
