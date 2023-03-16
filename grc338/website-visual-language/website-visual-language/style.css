@@ -11,11 +11,10 @@ body {
 }
 
 div.home-container { 
-	background: url(home-background-11.jpg) center center fixed;
+	background: url(home-background-13.jpg) center center fixed;
 	background-size: cover;
 	position: relative;
 	min-height: 100vh;
-	padding-bottom: 5em;
 }
 
 /* >>> IMPORTANT: you have to change the wrap the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class.  */
@@ -27,24 +26,23 @@ div.container {
 	padding-bottom: 5em;
 }
 main { 
-	padding: 1em 2em 2em;
+	padding: 1em 2em 0em;
 	}
 
 img {
     width: 100%; /*Please leave this line.*/
-     display: block;
+    display: block;
 }
 
 header {
 	display: grid;
 	grid-template-columns:60% 40%;
-	background: rgb(220,220,220);
+	background: rgb(230,230,230);
 	padding: 1em 2em 1em;
 	}
 
 h1 {
 	width: 18em ;
-	padding-bottom: 1em;
 	}
 
 h2, h3, h4 {
@@ -63,12 +61,13 @@ h2 {
 	
 h3 {
 	font-size: 1.7em;
-	margin: 1.5em 0em 0.5em;
+	margin: 0.5em 0em 0.5em;
 	font-family: "arpona", serif;
 	font-weight: 500;
 	font-style: normal;
 }
 h4 {
+	font-size: 1.2em;
 	font-family: "proxima-soft", sans-serif;
 	font-weight: 500;
 	font-style: normal;	
@@ -107,6 +106,7 @@ main.menu ul li {
 }	
 
 p {
+	font-size: 1em;
 	margin: 0em 0em 1em;
 	color: rgb(50,50,50);
 	font-family: "proxima-soft", sans-serif;
@@ -117,6 +117,7 @@ p {
 p.description {
 	grid-column: 1/2;
 	margin: 0.3em 0em;
+	min-height: 3em;
 	}
 	
 p.price {
@@ -140,22 +141,21 @@ nav ul li a {
 	}
 
 nav ul li.selected a {
-	color: rgb(250,250,250);
+	color: rgb(245,245,245);
 	background-color: rgb(230,107,44);
 	}
 
 p.slogan {
-	font-size: 4.5em;
-	font-family: "proxima-soft", sans-serif;
-	font-weight: 500;
+	font-size: 4em;
+	font-family: "arpona", serif;
+	font-weight: 300;
 	font-style: italic;
-	text-align: center;
+	text-align: left;
 	margin: 1em 0em 0em;
 	color: rgb(245,245,245);	
 	}
 h3.visit {
-	text-align: center;
-	margin: 4em 0em 0em;
+	text-align: left;
 	color: rgb(245,245,245);
 }
 p.address {
@@ -163,8 +163,7 @@ p.address {
 	font-family: "proxima-soft", sans-serif;
 	font-weight: 300;
 	font-style: normal;
-	text-align: center;
-	margin: 0em 0em 0em;
+	text-align: left;
 	color: rgb(245,245,245);
 }
 footer {
@@ -173,8 +172,8 @@ footer {
   width: 100%;
   height: 3rem; 
   box-sizing: border-box;
-  padding: 1.3em 1em;
-  background: rgb(220,220,220);
+  padding: 1em 1em;
+  background: rgb(230,230,230);
 }
 
 address {
@@ -183,7 +182,10 @@ address {
 	color: rgb(230,107,44);
 	font-style: normal;
 	}
-
+article {
+	max-width: 36em;
+	margin: auto;
+}
 
 footer p {
 	margin: 0em;
@@ -191,18 +193,18 @@ footer p {
 @media screen and (min-width: 60em) {
 	
 	div.home-container {
-		max-width: 60em;
+		max-width: 70em;
 		margin: auto;
 	}
 	div.container {
-		max-width: 60em;
+		max-width: 70em;
 		margin: auto;
 	}
 	nav ul li {
 		text-transform: uppercase;
 		font-weight: bold;
 		margin:0em 0.5em;
-		display: inline;
+		display: inline-block;
 		}
 	nav {
 		margin-top: 2em
@@ -212,5 +214,16 @@ footer p {
 		grid-template-columns: auto auto;
 		column-gap: 4em
 	}
+	p.slogan{
+		margin-bottom: 3em;
+	}
 
+	/* figure {
+		height: 30em;
+		overflow: hidden;
+	}
+
+	figure img {
+		margin-top: calc(10em - 50%);
+	} */
 }
