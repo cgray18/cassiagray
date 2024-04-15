@@ -1,71 +1,116 @@
 /*CSS DOCUMENT*/
 
+body {
+	font-family: sans-serif;
+	line-height: 1.4em;
+	color: #222;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	}
+	
 div.container {
-	max-width: 50em;
-	margin: auto;
+        max-width: 40em;
+        margin: 1em;
+        padding: 1em;
+}
+
+/* I have *some* selectors with their declarations in the declaration block. You’ll need more selectors and declaration blocks. */
+
+section.personal-info ul li input[type="text"],
+section ul li input[type="email"],
+section ul li input[type="tel"],
+section ul li select {
+	flex: 1 0 20em;
+	display: block;
+	box-sizing: border-box;
+}
+
+section.personal-info ul li label{
+	flex: 0 0 40em;
+}
+
+section.personal-info ul li {
+	flex: 1 0 20em;
+	padding: 0em 0em 1em 0em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.personal-info ul li select {
+	background-color: #fafafa;
+}
+
+section label[for = notes] {
+	display: block;
+}
+
+
+section ul {
+	padding: 0em;
+}
+
+section ul li{
+	list-style: none;
 }
 
 section {
-	margin: 0 0 1em;
+    background: #eee;
+    padding: 1em;
+    margin-bottom: 1em;
 }
 
-.section-1 {
-	background: #888;
+section p {
+	margin-top: 0;
 }
 
-.section-2 {
-	background: #aaa;
+section button{
+	background-color: #fafafa;
 }
 
-.section-3 {
-	background: #ccc;
-}
-
-.section-4 {
-	background: #eee;
-}
-
-ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-ul li {
-	/* border-top: 3px solid #000; */
-}
-
-label {
-	/* background-color: #ffd; */
-}
-
-.section-1 ul li {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.section-1 ul li label {
-	flex: 0 0 8em; 
-	/* exactly the same as giving the width of 8em */
-}
-
-.section-1 ul li input[type="text"], .section-1 ul li select {
-	flex: 4 0 32em
-}
-
-.section-2 ul {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.section-2 ul li {
-	margin: 0 1em 0 0;
-	flex: 1 0 15em;
-	/* sets the minimum width to 15em i believe */
+section h3 {
+	margin-bottom: 0em;
 }
 
 textarea {
+	box-sizing: border-box;
 	display: block;
-	/* this gets the textbox to start on a new line*/
-	width: 90%;
-	height: 6em;
+	width: 100%;  
+	background: #fcfcfc;
+	border: 1px solid #e8e8e8;
+	padding: 0.4em;
+	font-family: sans-serif;
+	color: #777;
+	}
+
+@media screen and (min-width: 60em){
+	div.container {
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto  
+	}
+
+	section.order ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	section.order ul li{
+		flex: 1 0 15em;
+	}
+
+	section.personal-info ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	section.personal-info li label{
+		flex: 1 0 10em;
+	}
+
+	section.personal-info ul li input[type="text"],
+	section ul li input[type="email"],
+	section ul li input[type="tel"],
+	section ul li select {
+		flex: 4 0 10em;
+	}
 }
