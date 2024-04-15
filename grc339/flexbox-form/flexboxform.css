@@ -1,0 +1,71 @@
+/*CSS DOCUMENT*/
+
+div.container {
+	max-width: 50em;
+	margin: auto;
+}
+
+section {
+	margin: 0 0 1em;
+}
+
+.section-1 {
+	background: #888;
+}
+
+.section-2 {
+	background: #aaa;
+}
+
+.section-3 {
+	background: #ccc;
+}
+
+.section-4 {
+	background: #eee;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	/* border-top: 3px solid #000; */
+}
+
+label {
+	/* background-color: #ffd; */
+}
+
+.section-1 ul li {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section-1 ul li label {
+	flex: 0 0 8em; 
+	/* exactly the same as giving the width of 8em */
+}
+
+.section-1 ul li input[type="text"], .section-1 ul li select {
+	flex: 4 0 32em
+}
+
+.section-2 ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section-2 ul li {
+	margin: 0 1em 0 0;
+	flex: 1 0 15em;
+	/* sets the minimum width to 15em i believe */
+}
+
+textarea {
+	display: block;
+	/* this gets the textbox to start on a new line*/
+	width: 90%;
+	height: 6em;
+}
