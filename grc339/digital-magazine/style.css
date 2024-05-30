@@ -19,11 +19,10 @@ figure {
 div.container, div.home-container {
     max-width: 40em;
     margin: auto
-    
 }
 
 header {
-    margin: 1em .5em 0 .5em;
+    margin: 1rem .5rem 0 0.5rem;
 }
 
 h1 {
@@ -44,7 +43,7 @@ h2 {
 }
 
 
-section.secondary-story h2 {
+section.secondary-story h2, section.photo-gallery h2 {
     font-size: 1.5em;
 }
 
@@ -91,6 +90,7 @@ nav ul li a {
 
 nav ul li {
     padding-bottom: 0.25em;
+    margin: 0;
 }
 
 nav ul li a:hover {
@@ -108,6 +108,16 @@ article h2 {
     margin: 1em 0 0.5em 0;
 }
 
+form h2 {
+    font-size: 1.5em;
+    margin: 0 0.5rem 0 .5rem;
+    padding-bottom: 0.5rem;
+}
+
+article h2, article h3, article li, article p, article figcaption {
+    margin: .2rem .5rem 0 .5rem;
+}
+
 h3 {
     font-size: 1.5em;
     font-family: circe-slab-a, serif;
@@ -116,9 +126,9 @@ h3 {
     color: rgb(224,96,126);
 }
 
-article p {
+/* article p {
     margin: 0 0 1em 0;
-}
+} */
 
 section.main-story h2 {
     font-size: 2.5em;
@@ -138,9 +148,133 @@ section.tertiary-story p {
     margin: 0;
 }
 
+div.gallery body {
+    font-family: sans-serif;
+    line-height: 1.4em;
+    color: #222;
+    background-color: #ddd;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div.gallery h1 {
+    padding-top: 2em;
+    margin-bottom: 1em;
+}
+
+div.gallery article {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(100% + 2em);
+}
+
+div.gallery figure {
+    margin: 0;
+    width: calc(100%-2em);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ main figure:nth-of-type(8){
+    opacity: 1;
+}
+
+div.gallery nav {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0.2em;
+}
+
+div.subscribe {
+    background-image: url('painted-plates.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: calc(20% + 1em);
+    max-width: 100%
+}
+
+form {
+    background-color:rgb(253,248,238);
+    padding: 1em;
+}
+
+textarea {
+	box-sizing: border-box;
+	display: block;
+	width: calc(100% - 1rem);  
+	background: #fafafa;
+	border: 2px solid rgb(240,115,47);
+	padding: .25rem;
+	font-family: circe-slab-a, serif;
+    font-weight: 500;
+    font-style: normal;
+	color: rgb(50, 117, 133); 
+    margin: .2rem .5rem 0 .5rem;
+}
+
+section.personal-info ul li input[type="text"] {
+	flex: 1 0 10em;
+	display: block;
+	box-sizing: border-box;
+    width: 100%;
+    border: 2px solid rgb(240,115,47);
+    color: rgb(50, 117, 133); 
+    padding: .25rem;
+    font-family: circe-slab-a, serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+section.personal-info ul li label{
+	flex: 0 0 40em;
+}
+
+section.personal-info ul li {
+	flex: 1 0 10em;
+	padding: 0em 0em 1em 0em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.personal-info ul li select {
+	background-color: #fafafa;
+}
+
+section label[for = feedback] {
+	display: block;
+    font-family: circe-slab-a, serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 .5rem 0 .5rem;
+    color: rgb(0,0,0);
+}
+
+button[type = subscribe] {
+    font-family: circe-slab-a, serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(0,0,0);
+    background-color: rgb(193, 223, 124);
+    margin: 0 .5rem 0 .5rem;
+}
+
+input {
+    display: none;
+}   
+
 footer {
     background-color: rgb(50, 117, 133); 
-    padding: .5em;
+    padding: .75rem .5rem .75rem .5rem;;
     width: 100%;
     color: #eee;
     box-sizing: border-box;
@@ -151,18 +285,11 @@ footer p {
 }
 
 
-@media screen and (min-width: 40em){
-    div.container{
-        margin: auto 
-    }
-
+@media screen and (min-width: 60em){
     nav ul li {
         display: inline-block;
         padding-right: 1em;
     }
-}
-
-@media only screen and (min-width: 60em){
     
     div.home-container {
         max-width: 80em;
@@ -188,6 +315,20 @@ footer p {
 
     div.container aside {
         margin-top: 0;
+    }
+
+    div.gallery main {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    div.gallery nav {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 0.2em;
     }
 
     header, footer {
@@ -233,35 +374,53 @@ footer p {
         object-fit: cover;
     }
 
-    section.secondary-story {
+    section.secondary-story, section.photo-gallery {
         display: flex;
     }
 
-    section.secondary-story a {
+    section.secondary-story a, section.photo-gallery a {
         display: flex;
         flex: 1 0 12em;
         flex-direction: column;
     }
 
-    section.secondary-story a figure {
+    section.secondary-story a figure, section.photo-gallery a figure {
         flex: 1 0 12em;
         display: flex;
     }
 
-    section.secondary-story a h2 {
+    section.secondary-story a h2, section.photo-gallery a h2 {
         flex: 0 0 1em;
         margin-left: 0;
     }
 
-    section.secondary-story a p {
+    section.secondary-story a p, section.photo-gallery a p {
         flex: 0 0 4em;
         margin-left: 0;
     }
 
-    section.secondary-story a figure img {
+    section.secondary-story a figure img, section.photo-gallery a figure img {
         object-fit: cover;
     }
 
+	section.personal-info ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	section.personal-info li label{
+		flex: 1 0 5em;
+	}
+
+    div.subscribe {
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto  
+	}
+
+	section.personal-info ul li input[type="text"] {
+		flex: 2 0 5em;
+	}
 
     section {
         padding: 0 0 .5rem 0;
